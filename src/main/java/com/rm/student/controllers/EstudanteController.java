@@ -1,15 +1,15 @@
-package controllers;
+package com.rm.student.controllers;
 
-import models.EstudanteModel;
+import com.rm.student.models.EstudanteModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import services.EstudanteService;
+import com.rm.student.services.EstudanteService;
 
 import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(path = "/estudantes")
+@RequestMapping(path ="/estudantes")
 public class EstudanteController {
 
     @Autowired

@@ -1,12 +1,14 @@
-package services;
+package com.rm.student.services;
 
-import models.EstudanteModel;
+import com.rm.student.models.EstudanteModel;
 import org.springframework.beans.factory.annotation.Autowired;
-import repositories.EstudanteRepository;
+import org.springframework.stereotype.Service;
+import com.rm.student.repositories.EstudanteRepository;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class EstudanteService {
 
     @Autowired

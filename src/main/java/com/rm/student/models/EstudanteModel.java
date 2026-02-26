@@ -1,4 +1,4 @@
-package models;
+package com.rm.student.models;
 
 import jakarta.persistence.*;
 
