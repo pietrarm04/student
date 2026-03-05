@@ -23,10 +23,20 @@ public class EstudanteService {
     }
 
     public Optional<EstudanteModel> buscarIdEstudante(Long id){
+
         return estudanteRepository.findById(id);
     }
 
     public void deletarEstudante(Long id){
         estudanteRepository.deleteById(id);
+    }
+
+    public EstudanteModel atualizarEstudante(Long id, EstudanteModel estudanteModel){
+       EstudanteModel model = estudanteRepository.findById(id).get();
+       model.setNome(estudanteModel.getNome());
+       model.setEmail(estudanteModel.getEmail());
+       model.setIdade(estudanteModel.getIdade());
+
+        return estudanteRepository.save(model);
     }
 }

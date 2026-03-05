@@ -17,6 +17,9 @@ public class EstudanteModel {
     private Integer idade;
 
 
+    public EstudanteModel(){
+    }
+
     public Long getId() {
         return id;
     }
