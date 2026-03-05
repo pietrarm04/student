@@ -1,5 +1,6 @@
 package com.rm.student.models;
 
+import enums.EstudanteEnum;
 import jakarta.persistence.*;
 
 @Entity
@@ -15,9 +16,14 @@ public class EstudanteModel {
     private String email;
     @Column(name = "age")
     private Integer idade;
+    private EstudanteEnum estudanteEnum;
 
 
     public EstudanteModel(){
+    }
+
+    public void setEstudanteEnum(EstudanteEnum estudanteEnum) {
+        this.estudanteEnum = estudanteEnum;
     }
 
     public Long getId() {
@@ -50,6 +56,10 @@ public class EstudanteModel {
 
     public void setIdade(Integer idade) {
         this.idade = idade;
+    }
+
+    public EstudanteEnum getEstudanteEnum() {
+        return estudanteEnum;
     }
 }
 
